@@ -49,3 +49,11 @@ git clone https://LucasBou:${GIT_PERSONAL_ACCESS_TOKEN}@github.com/LucasBou/ENSA
 ### Le readme ne mentionne pas de variables d'environnement
 
 De plus, pas de .ven dans le repo. Ce qui parait logique vu qu'il n'y a pas de connection à un bdd dans le repo.
+
+### VSCode settings
+Le python path est déjà renseigné dans le settings.json
+Pour ce qui est du formatteur, ruff est à installer par le store et la ligne dans le settings.json : 
+ ```json
+     "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+ ```
