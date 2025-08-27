@@ -40,7 +40,12 @@ python src/__main__.py
 
 ## Remarques durant le TP :
 
+### Cloner le repo git
 La ligne de commande pour cloner le repo s'est avérée être légèrement différente :
 ```bash
 git clone https://LucasBou:${GIT_PERSONAL_ACCESS_TOKEN}@github.com/LucasBou/ENSAI-2A-complement-info-TP-prepa.git
 ```
+
+### Le readme ne mentionne pas de variables d'environnement
+
+De plus, pas de .ven dans le repo. Ce qui parait logique vu qu'il n'y a pas de connection à un bdd dans le repo.
