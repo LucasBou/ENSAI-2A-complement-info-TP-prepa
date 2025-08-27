@@ -37,3 +37,10 @@ pip list                            # to list all installed packages
 ```bash
 python src/__main__.py
 ```
+
+## Remarques durant le TP :
+
+La ligne de commande pour cloner le repo s'est avérée être légèrement différente :
+```bash
+git clone https://LucasBou:${GIT_PERSONAL_ACCESS_TOKEN}@github.com/LucasBou/ENSAI-2A-complement-info-TP-prepa.git
+```
