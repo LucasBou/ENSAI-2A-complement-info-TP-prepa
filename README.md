@@ -57,3 +57,17 @@ Pour ce qui est du formatteur, ruff est à installer par le store et la ligne da
      "[python]": {
         "editor.defaultFormatter": "charliermarsh.ruff",
  ```
+
+ ## Remarques TP2
+
+ ### Les tests ne passent pas car on a pas encore codé le pokemon defender
+
+ ### if else peut être une mauvaise idée car en cas de changement on a plusieurs endroit où il faut modifier le code. Et donc possibilité d'oublier.
+
+ ### Attack damage 
+ c'est quoi +compute_damage(APkm, APkm) : int ??? APkm kezako ?Je ne comprends pas la signature de cette fonction. Je crois que c'est A_Pokemon donc que la méthode aurait pour signature
+compute_damage(APkm:AbstractPokemon, APkm:AbstractPokemon) : int
+
+### Mentionner les fixture pour l'écriture des tests
+
+### Mentionner le soucis de tester une méthode avec de l'aléatoire
