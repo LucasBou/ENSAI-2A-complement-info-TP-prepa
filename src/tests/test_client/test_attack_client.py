@@ -2,7 +2,7 @@ import os
 
 from client.attack_client import AttackClient
 from unittest import mock
-
+from business_object.attack.fixed_damage_attack import FixedDamageAttack
 
 """
 Comme l'url du web service est gérée par des variables d'environement, et que
@@ -47,6 +47,18 @@ class TestAttackClient:
 
         # THEN
         assert attacks is not None
+
+    def test_create_attack(self):
+        attack_client = AttackClient()
+        to_create = FixedDamageAttack(
+            power=15,
+            name="Hello Attack",
+            description="Yells hello to the opponent",
+            accuracy=150,
+            element="Normal",
+        )
+
+        attack_client.create_attack(to_create)
 
 
 if __name__ == "__main__":

@@ -84,6 +84,20 @@ class AttackClient(metaclass=Singleton):
 
         print(f"Something went wrong with the call :\n {req=}")
 
+    def create_attack(self, attack: AbstractAttack):
+        url = f"{self.__HOST}{END_POINT}/"
+        print("GET  " + url + "\n")
+        headers = {"accept": "application/json", "Content-Type": "application/json"}
+        data = {
+            "name": "Fire demon",
+            "attack_type": "physical attack",
+            "power": 0,
+            "accuracy": 0,
+            "element": "string",
+            "description": "string",
+        }
+        req = requests.post(url, headers=headers, json=data)
+
 
 # Execute Code When the File Runs as a Script
 if __name__ == "__main__":
