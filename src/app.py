@@ -15,6 +15,27 @@ async def get_hello_name(name: str):
     return {"message": "Hello {}".format(name)}
 
 
+@app.get("/character")
+async def get_all_characters():
+    return {
+        "characters": [{"name": c.nom, "age": c.age} for c in characters_db.values()]
+    }
+
+
+@app.put("/character/{id}")
+async def modify_character_name_by_id(id: int, name: str):
+    characters_db[id].nom = name
+
+    return {"message": "Name replaced", "id": id}
+
+
+@app.delete("/character/{id}")
+async def delete_character_by_id(id: int):
+    del characters_db[id]
+
+    return {"message": "Character deleted", "id": id}
+
+
 # Define a Pydantic model for the character
 class Personnage(BaseModel):
     nom: str
@@ -41,4 +62,4 @@ def create_character(character: Personnage):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=80)
+    uvicorn.run(app, host="0.0.0.0", port=5000)
