@@ -44,3 +44,16 @@ python -m pytest -v
 ```bash
 python src/__main__.py
 ```
+
+## Remarks
+
+### getting branch from original repo in a fork
+
+```bash
+git remote add theirusername git@github.com:theirusername/reponame.git
+git fetch theirusername
+git checkout -b mynamefortheirbranch theirusername/theirbranch
+```
+
+### You need the webserver form the first part to continue on the second part
+And don't forget to change the mock in the tests
